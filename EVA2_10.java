@@ -13,25 +13,44 @@ import java.util.Scanner;
 public class EVA2_10 {
 
     public static void main(String[] args) {
+         int days;
+         Scanner captu = new Scanner(System.in);
+         do{
+         System.out.println("Captura el número del día de la semana:");
+         days = captu.nextInt();
+         captu.nextLine();
+         }while(days < 1 || days > 7);
+         //while(!(days >- 1 && days <- 7))
+         
+        //ELEGIR ENTRE MÚLTIPLES ALTERNATIVAS
         
-        int num;
-        String cade = "";
-        Scanner captu = new Scanner(System.in);
-        System.out.println("Introduce un número:");
-        num = captu.nextInt();
-        for(int i = 1; i <= num; i++){
-        cade = cade + "*";
-        System.out.println(cade);
-        
-        }
-               
-        for(int i = num; i >= 1; i--){
-            cade = "";
-            
-        for(int j = 1; j <= i; j++){
-        cade = cade + "*";
-        System.out.print(cade);
-        }
+         switch(days){
+             case 1: 
+                 System.out.println("Domingo");
+                 break; //interrumpir el switch (lo termina)
+                      case 2: 
+                 System.out.println("Lunes");
+                 break; //interrumpir el switch (lo termina)
+                      case 3: 
+                 System.out.println("Martes");
+                 break; //interrumpir el switch (lo termina)
+                      case 4: 
+                 System.out.println("Miércoles");
+                 break; //interrumpir el switch (lo termina)
+                      case 5: 
+                 System.out.println("Jueves");
+                 break; //interrumpir el switch (lo termina)
+                      case 6: 
+                 System.out.println("Viernes");
+                 break; //interrumpir el switch (lo termina)
+                      case 7: 
+                 System.out.println("Sábado");
+                 break; //interrumpir el switch (lo termina)
+                      default: //Opcional, se ejecuta cuando no existe una opción
+                       //no tiene break, Y ES LA ÚLTIMA INSTRUCCIÓN DEL SWITCH
+                          System.out.println("Número no válido (solo del 1 al 7)");
+                          }
     }
+
     }
-}
+
